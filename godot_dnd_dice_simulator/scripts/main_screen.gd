@@ -157,6 +157,8 @@ func totals_label_update():
 	var d12_total : int = roll_dice_12d(Global.selected_dice[4])
 	var d20_total : int = roll_dice_20d(Global.selected_dice[5])
 	
+	var all_die_totals : int = d4_total + d6_total + d8_total + d10_total + d12_total + d20_total
+	
 	#setup text printing 
 	d_4_label.text = str(Global.selected_dice[0]) + " * D4 = "+str(d4_total)
 	d_6_label.text = str(Global.selected_dice[1]) + " * D6 = "+str(d6_total)
@@ -164,6 +166,7 @@ func totals_label_update():
 	d_10_label.text = str(Global.selected_dice[3]) + " * D10 = "+str(d10_total)
 	d_12_label.text = str(Global.selected_dice[4]) + " * D12 = "+str(d12_total)
 	d_20_label.text = str(Global.selected_dice[5]) + " * D20 = "+str(d20_total)
+	total_label.text = "Grand Total = " + str(all_die_totals)
 
 
 
