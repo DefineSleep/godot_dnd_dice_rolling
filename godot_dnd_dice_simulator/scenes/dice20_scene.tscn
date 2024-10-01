@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2gewdt3wumcn"]
+
+[ext_resource type="Texture2D" uid="uid://cl2ldctp5penw" path="res://assets/Dice 20 faces icon (1)white.png" id="1_4bl3k"]
+
+[node name="Dice20Scene" type="TextureRect"]
+texture = ExtResource("1_4bl3k")

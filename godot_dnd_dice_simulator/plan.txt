@@ -1,0 +1,13 @@
+icon colors in hex 
+
+green : 7DBF3E
+white : FFFFFF
+grey : 9B9B9B
+
+
+general UI colors 
+
+all greenish
+EDF6F9 - darker
+006D77 - middle
+83C5BE - lightest

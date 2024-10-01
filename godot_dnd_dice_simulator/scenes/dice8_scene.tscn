@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1jfqr1oj7kov"]
+
+[ext_resource type="Texture2D" uid="uid://djtx7dupofboc" path="res://assets/Dice 8 faces 8 (2)white.png" id="1_17i5q"]
+
+[node name="Dice8Scene" type="TextureRect"]
+texture = ExtResource("1_17i5q")

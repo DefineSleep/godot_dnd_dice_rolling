@@ -1,0 +1,248 @@
+[gd_scene load_steps=25 format=3 uid="uid://d2k7118wuslr7"]
+
+[ext_resource type="Theme" uid="uid://dt1clsdq86gmw" path="res://scenes/app_theme.tres" id="1_cipn4"]
+[ext_resource type="Script" path="res://scripts/main_screen.gd" id="1_kfpfl"]
+[ext_resource type="Texture2D" uid="uid://ne30hl3dhl2c" path="res://assets/Dice 10 icon (1).png" id="2_up3ac"]
+[ext_resource type="Texture2D" uid="uid://dbnrcaxpilgnl" path="res://assets/Dice 4 green.png" id="3_25cac"]
+[ext_resource type="Texture2D" uid="uid://cl230wnpbajc" path="res://assets/Dice 4 icon.png" id="3_ibp7o"]
+[ext_resource type="Texture2D" uid="uid://bm08tuk0lrfaq" path="res://assets/Dice 4 grey.png" id="4_da2pt"]
+[ext_resource type="Texture2D" uid="uid://hbvl312kmkyq" path="res://assets/dice6_pressed.png" id="4_m1eoe"]
+[ext_resource type="Texture2D" uid="uid://bl21u4rg6ccxg" path="res://assets/Perspective Dice 6.png" id="4_rvcau"]
+[ext_resource type="Texture2D" uid="uid://bq3dhqr22o6nk" path="res://assets/Dice 8 faces 8.png" id="5_31yd0"]
+[ext_resource type="Texture2D" uid="uid://dsrouvtyp0hgo" path="res://assets/dice6_hover.png" id="5_jpv4f"]
+[ext_resource type="Texture2D" uid="uid://cpjrmsd5ryofi" path="res://assets/Dice 12 icon.png" id="6_3dyua"]
+[ext_resource type="Texture2D" uid="uid://wnsywq1rnv26" path="res://assets/Dice 20 Faces Icon.png" id="7_c6jju"]
+[ext_resource type="Texture2D" uid="uid://djtx7dupofboc" path="res://assets/Dice 8 faces 8 (2)white.png" id="8_6ogw1"]
+[ext_resource type="Texture2D" uid="uid://boup36ndm6vve" path="res://assets/Dice 8 Faces 8 (1).png" id="9_mu1dj"]
+[ext_resource type="Texture2D" uid="uid://cwt70fmfglr82" path="res://assets/Dice 10 icon (2)white.png" id="11_dimgj"]
+[ext_resource type="Texture2D" uid="uid://bmb6058ona5ag" path="res://assets/Dice 10 icon.png" id="13_7vcs8"]
+[ext_resource type="Texture2D" uid="uid://d1rksxryo2c4r" path="res://assets/Dice 12 icon (2)white.png" id="14_mm2ix"]
+[ext_resource type="Texture2D" uid="uid://c4beakqr7ayjm" path="res://assets/Dice 12 icon (1).png" id="16_q5n78"]
+[ext_resource type="Texture2D" uid="uid://cl2ldctp5penw" path="res://assets/Dice 20 faces icon (1)white.png" id="17_lskod"]
+[ext_resource type="Texture2D" uid="uid://d3kewt7aoxpsy" path="res://assets/Dice 20 faces 20.png" id="19_pcli3"]
+[ext_resource type="FontFile" uid="uid://dahk1psfbiy8g" path="res://assets/AgaveNerdFontMono-Regular.ttf" id="20_tg1v2"]
+
+[sub_resource type="Theme" id="Theme_mbfdg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5eve"]
+bg_color = Color(0.223529, 0.243137, 0.254902, 1)
+border_width_left = 10
+border_color = Color(0.964706, 0.968627, 0.921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uru3y"]
+bg_color = Color(0.494118, 0.827451, 0.129412, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="main_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cipn4")
+script = ExtResource("1_kfpfl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="dice" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/dice"]
+layout_mode = 2
+theme = SubResource("Theme_mbfdg")
+
+[node name="dice_list" type="GridContainer" parent="VBoxContainer/dice/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+columns = 6
+
+[node name="dice4_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("3_ibp7o")
+texture_pressed = ExtResource("3_25cac")
+texture_hover = ExtResource("4_da2pt")
+
+[node name="dice6_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("4_rvcau")
+texture_pressed = ExtResource("4_m1eoe")
+texture_hover = ExtResource("5_jpv4f")
+
+[node name="dice8_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("8_6ogw1")
+texture_pressed = ExtResource("5_31yd0")
+texture_hover = ExtResource("9_mu1dj")
+
+[node name="dice10_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("11_dimgj")
+texture_pressed = ExtResource("2_up3ac")
+texture_hover = ExtResource("13_7vcs8")
+
+[node name="dice12_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("14_mm2ix")
+texture_pressed = ExtResource("6_3dyua")
+texture_hover = ExtResource("16_q5n78")
+
+[node name="dice20_button" type="TextureButton" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+texture_normal = ExtResource("17_lskod")
+texture_pressed = ExtResource("7_c6jju")
+texture_hover = ExtResource("19_pcli3")
+
+[node name="Label4" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "1 - 4"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "1 - 6"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "1 - 8"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "0 - 9"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "1 - 12"
+horizontal_alignment = 1
+
+[node name="Label20" type="Label" parent="VBoxContainer/dice/CenterContainer/dice_list"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 25
+text = "1 - 20"
+horizontal_alignment = 1
+
+[node name="current_roll" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/current_roll"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/current_roll/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="grid1" type="GridContainer" parent="VBoxContainer/current_roll/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+columns = 7
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/current_roll/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t5eve")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 35
+text = "------ RESULTS ------"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="d4_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D4:"
+
+[node name="d6_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D6:"
+
+[node name="d8_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D8:"
+
+[node name="d10_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D10:"
+
+[node name="d12_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D12:"
+
+[node name="d20_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "D20:"
+
+[node name="total_label" type="Label" parent="VBoxContainer/current_roll/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 36
+text = "Total:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="roll_dice_button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_uru3y")
+text = "ROLL DICE"
+
+[node name="clear_button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_tg1v2")
+theme_override_font_sizes/font_size = 50
+text = " CLEAR "
+
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice4_button" to="." method="_on_dice_4_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice6_button" to="." method="_on_dice_6_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice8_button" to="." method="_on_dice_8_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice10_button" to="." method="_on_dice_10_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice12_button" to="." method="_on_dice_12_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/dice/CenterContainer/dice_list/dice20_button" to="." method="_on_dice_20_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/roll_dice_button" to="." method="_on_roll_dice_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/clear_button" to="." method="_on_clear_pressed"]
